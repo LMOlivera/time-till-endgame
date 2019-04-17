@@ -1,0 +1,88 @@
+/*Don't change*/
+body, html {
+  height: 100%;
+  font-family: 'Audiowide', cursive;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-image: url("https://cdn.glitch.com/05772acb-e20d-4cb2-b545-a61ab6a2a14c%2Favengers-infinity-war-2018-4k-cq.jpg?1555512583330");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#app {
+  padding-top: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  text-align: center;
+}
+header img{
+  width: auto;
+}
+
+#background-container {
+  background-color: rgba(0,0,0,.6);
+  align-self: center;
+  margin-top: 3vw;
+  width: 45%;
+  border-radius: 10px;
+}
+
+#container {
+  color: white;
+  padding: 20px;
+  padding-top: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#date, #time{
+  width: 150px;
+  color: red;
+}
+
+#btn{
+  padding: 25px;
+  border: 0;
+  border-radius: 10px;
+  background-color: rgba(80,80,80,.6);
+}
+
+#btn:hover{
+  background-color: rgba(150,150,150,.8);
+}
+
+
+
+#btn text{
+  font-family: 'Audiowide', cursive;  
+  color: white;
+}
+
+@media(max-width: 700px){
+  #background-container {
+    width: 80%;
+  }
+}
+
+
+@media(max-width: 700px){
+  body, html{
+    background-image: url("https://cdn.glitch.com/05772acb-e20d-4cb2-b545-a61ab6a2a14c%2Favengers_4___endgame__2019__poster_by_midiya42_dch7nw5-pre.jpg?1555527763108");
+  }
+  
+  #background-container {
+    width: 80%;
+  }
+  header img{
+    width: 80%
+  }
+}
