@@ -48,7 +48,6 @@ class App extends React.Component{
                                                      name="date"
                                                      id="date"
                                                      value={this.state.dateValue}
-                                                     max="2019-08-31"
                                                      min="2019-04-24"
                                                      onChange={(txt) => this.updateDateInputValue(txt)}
                                                      placeholder="yyyy-mm-dd"/>
