@@ -1,4 +1,5 @@
-import React from 'react';
+const React = require('react');
+const InputName = require('./input-name');
 
 class Timer extends React.Component{
   constructor(props){
@@ -10,6 +11,7 @@ class Timer extends React.Component{
       hours: 0,
       minutes: 0,
       seconds: 0,
+      date: "",
       calculateLoop: calculateLoop
     }    
   }
@@ -51,7 +53,6 @@ class Timer extends React.Component{
       
       //*******Time*******
       inp = this.props.timeInput;
-      console.log(inp);
       if(inp == NaN){
         throw "Incorrect input"; 
       }
@@ -99,7 +100,8 @@ class Timer extends React.Component{
         days: days,
         hours: hours,
         minutes: minutes,
-        seconds: seconds
+        seconds: seconds,
+        date: d.toLocaleString()
       });
     }catch(e){
       this.setState({
@@ -113,15 +115,16 @@ class Timer extends React.Component{
     const timer = <p>You will have to wait <b>{this.state.days} days and {(this.state.hours <= 9) ? "0" : ''}{this.state.hours}
                                               :{(this.state.minutes <= 9) ? "0" : ''}{this.state.minutes}
                                               :{(this.state.seconds <= 9) ? "0" : ''}{this.state.seconds} </b>
-                  to watch Endgame.</p>;
+                  to watch Endgame.
+            <InputName days={this.state.days} hours={this.state.hours} minutes={this.state.minutes} seconds={this.state.seconds} dateInput={this.props.dateInput} timeInput={this.props.timeInput}/>
+          </p>;
     return(
       <div>
-        <center><button id="btn" onClick={() => this.loop()}><text>How much do I have to wait?</text></button></center>
-        <br/><br/>
-        {this.state.show ? timer : ''}
+        <center><button className="btn" type="button" onClick={() => this.loop()}><text>How much do I have to wait?</text></button></center>        
+        {this.state.show ? timer : ''}        
       </div>        
     );
   }
 }
 
-export default Timer;
+module.exports = Timer;

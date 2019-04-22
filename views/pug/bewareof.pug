@@ -1,0 +1,24 @@
+html(lang="en")
+  head
+    title Time till Endgame
+    meta(name='description', content='A cool thing made with HyperDev')
+    link#favicon(rel='icon', href='https://cdn.glitch.com/05772acb-e20d-4cb2-b545-a61ab6a2a14c%2FIcons8-Windows-8-Cinema-Avengers.ico?1555445551418', type='image/x-icon')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet")
+    link(href='./style.css', rel='stylesheet')       
+  body
+    #app
+      header
+        img(src="https://fontmeme.net/permalink/190417/7b4a9a7c20d7b7b7b22e455a7a0d3544.png" alt="Time till Endgame banner" border="0")
+      #background-container
+          p.users-list This people can spoil you!
+            ul
+              each user in dangerousUsers
+                li.user= user.name + " watches Endgame on " + user.date + " at " + user.time + "."
+          p.users-list On the other side, you could spoil this people:
+            ul
+              each user in fragileUsers
+                li.user= user.name + " watches Endgame on " + user.date + " at " + user.time + "."
+    script(src="/bundle.js")

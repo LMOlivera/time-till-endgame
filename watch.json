@@ -8,10 +8,11 @@
   "restart": {
     "exclude": [
       "^public/",
-      "^dist/",
-      "^build/"
+      "^dist/"
     ],
     "include": [
+      "\\.js$",
+      "\\.jsx$",
       "\\.json"
     ]
   },

@@ -8,7 +8,7 @@ body {
   padding: 0;
   margin: 0;
   width: 100%;
-  background-image: url("https://cdn.glitch.com/05772acb-e20d-4cb2-b545-a61ab6a2a14c%2Favengers-infinity-war-2018-4k-cq.jpg?1555512583330");
+  background-image: url("https://cdn.glitch.com/da665bf4-399a-4ab1-bf4f-fb0bd1f26e32%2F4a905860-4fd6-4385-918e-5fa73018d40b_avengers-endgame-china-poster-top.jpg?1555601835474");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -32,44 +32,77 @@ header img{
   background-color: rgba(0,0,0,.6);
   align-self: center;
   margin-top: 3vw;
-  width: 45%;
+  width: 60%;
   border-radius: 10px;
 }
 
 #container {
   color: white;
-  padding: 20px;
-  padding-top: 30px;
+  padding: 5px;
+  padding-top: 20px;
   border-radius: 10px;
   text-align: center;
 }
 
-#date, #time{
+input{
   width: 150px;
   color: red;
 }
+input:focus{
+  border: 2px solid red;
+}
 
-#btn{
-  padding: 25px;
+.btn{
+  padding: 20px;
   border: 0;
   border-radius: 10px;
   background-color: rgba(80,80,80,.6);
 }
 
-#btn:hover{
+.btn:hover{
   background-color: rgba(150,150,150,.8);
 }
 
-
-
-#btn text{
+.btn text{
   font-family: 'Audiowide', cursive;  
   color: white;
 }
 
-@media(max-width: 700px){
+
+.btn-share{
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  background-color: rgba(80,80,80,.6);
+  color: white;
+  font-family: 'Audiowide', cursive;  
+}
+
+.btn-share:hover{
+  color: white;
+  background-color: rgba(150,150,150,.8);
+}
+
+form input{
+  color: red;
+}
+
+.users-list{
+  padding: 5px;
+  color: white;
+}
+
+.user{
+  color:white;
+}
+
+
+
+
+@media(max-width: 1000px){
   #background-container {
     width: 80%;
+    padding: 0;
   }
 }
 
@@ -80,8 +113,13 @@ header img{
   }
   
   #background-container {
-    width: 80%;
+    width: 90%;
   }
+  
+  #container{
+    padding: 0px;
+  }
+  
   header img{
     width: 80%
   }
