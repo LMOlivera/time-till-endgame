@@ -1,22 +1,42 @@
 {
   "name": "time-till-endgame",
   "version": "v1.0.0",
-  "dependencies": {
-    "create-react-app": "^2.1.8",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+  "description": "An internal joke about how much time remains to finally watch The Avengers: Endgame.",
+  "main": "server.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack && node server.js"
   },
-  "devDependencies": {
-    "react-scripts": "0.9.5"
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongodb": "^3.2.3",
+    "mongoose": "^5.5.2",
+    "helmet": "^3.16.0",
+    "jsx-loader": "^0.13.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0",
+    "express-session": "^1.16.1",
+    "create-react-app": "^2.1.8",
+    "url-loader": "^1.1.2",
+    "body-parser": "^1.18.3",
+    "pug": "^2.0.3",
+    "path": "^0.12.7"
   },
   "engines": {
     "node": "8.x"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+  "repository": {
+    "url": "https://glitch.com/edit/#!/starter-react"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express",
+    "react",
+    "marvel",
+    "endgame"
+  ]
 }
