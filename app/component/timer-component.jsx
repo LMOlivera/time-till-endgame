@@ -33,7 +33,9 @@ class Timer extends React.Component{
     try{
       var inp = this.props.dateInput;//
       var d = new Date(inp.toLocaleString());
-      d.setDate(d.getDate() + 1);
+      d.setDate(d.getDate() + 2);      
+      
+      
       d.setHours(0);
       
       //*******Date*******
@@ -45,7 +47,7 @@ class Timer extends React.Component{
 
       var hours = Math.floor(delta / 3600) % 24;
       delta -= hours * 3600;
-
+      
       var minutes = Math.floor(delta / 60) % 60;
       delta -= minutes * 60;
 
@@ -80,7 +82,7 @@ class Timer extends React.Component{
           flag = true;
         }        
       }
-                  
+      //console.log(extraHours);
       hours+=extraHours;
       minutes+=extraMins;
       
@@ -88,14 +90,15 @@ class Timer extends React.Component{
         hours+=1;
         minutes-=60;
       }
-      
       if (hours>23){
         days += 1;
         hours -= 24;
       }
+      
       if (isNaN(minutes) || isNaN(hours)){
         throw "Incorrect output";
       }
+      days-=1;    
       this.setState({
         days: days,
         hours: hours,
@@ -107,8 +110,7 @@ class Timer extends React.Component{
       this.setState({
         show: false
       });
-    }
-    
+    }    
   }
 
   render(){
@@ -118,10 +120,11 @@ class Timer extends React.Component{
                   to watch Endgame.
             <InputName days={this.state.days} hours={this.state.hours} minutes={this.state.minutes} seconds={this.state.seconds} dateInput={this.props.dateInput} timeInput={this.props.timeInput}/>
           </p>;
+    const itsTime = <p><b>GO WATCH ENDGAME!!!</b></p>;
     return(
       <div>
         <center><button className="btn" type="button" onClick={() => this.loop()}><text>How much do I have to wait?</text></button></center>        
-        {this.state.show ? timer : ''}        
+        {this.state.show ? (this.state.days <= -1 ? itsTime : timer) : ''}        
       </div>        
     );
   }
