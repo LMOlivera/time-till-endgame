@@ -8,13 +8,13 @@ insert the date and time you are going to watch the film and the site tells you 
 - Webpack.
 - Made in [Glitch](https://glitch.com).
 
-### v1
+# v1
 You can see it [here](https://time-till-endgame.glitch.me/).
 
 **Features**
 - Countdown: Insert the date and time you are watching Endgame and see how much you have to wait to see it!
 
-### v2
+# v2
 You can see it [here](https://time-till-endgame-v2.glitch.me/).
 
 **Features**
